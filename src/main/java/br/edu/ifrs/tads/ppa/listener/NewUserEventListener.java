@@ -12,6 +12,5 @@ public class NewUserEventListener {
     public void newUser(NewUserEvent event) {
         
         System.out.println("Novo usuário criado: " + event);
-        // Adicionar a lógica de processamento necessária aqui.
     }
 }

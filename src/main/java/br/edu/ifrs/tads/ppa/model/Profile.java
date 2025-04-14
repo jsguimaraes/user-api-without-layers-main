@@ -28,8 +28,6 @@ public class Profile {
     @Enumerated(EnumType.STRING)
     private AccountType type;
 
-    // Getters e Setters
-
     public Integer getId() {
         return id;
     }
