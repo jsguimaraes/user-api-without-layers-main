@@ -1,11 +1,6 @@
-package com.example.demo;
+package br.edu.ifrs.tads.ppa.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "roles")
@@ -17,6 +12,8 @@ public class Role {
 
     @Column(nullable = false, unique = true, length = 64)
     private String name;
+
+    // Getters e Setters
 
     public Integer getId() {
         return id;
@@ -33,7 +30,4 @@ public class Role {
     public void setName(String name) {
         this.name = name;
     }
-    
-    
-
 }

@@ -1,4 +1,4 @@
-package com.example.demo;
+package br.edu.ifrs.tads.ppa.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,12 +13,12 @@ public class SecurityConfig {
         return http
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/h2-console/**").permitAll() 
+                        .requestMatchers("/h2-console/**").permitAll()
                         .anyRequest().permitAll())
                 .headers(headers -> headers
-                .frameOptions(cust -> cust.sameOrigin()))
-                .httpBasic(basic -> basic.disable())
-                .formLogin(login -> login.disable())
+                        .frameOptions(frame -> frame.sameOrigin()))
+                .httpBasic(httpBasic -> httpBasic.disable())
+                .formLogin(formLogin -> formLogin.disable())
                 .build();
     }
 }

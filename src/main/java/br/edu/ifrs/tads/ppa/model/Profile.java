@@ -1,15 +1,7 @@
-package com.example.demo;
+package br.edu.ifrs.tads.ppa.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.MapsId;
-import jakarta.persistence.OneToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "profiles")
@@ -35,6 +27,8 @@ public class Profile {
 
     @Enumerated(EnumType.STRING)
     private AccountType type;
+
+    // Getters e Setters
 
     public Integer getId() {
         return id;
@@ -75,6 +69,4 @@ public class Profile {
     public void setUser(User user) {
         this.user = user;
     }
-
-    
 }

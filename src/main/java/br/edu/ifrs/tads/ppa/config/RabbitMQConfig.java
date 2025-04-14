@@ -1,4 +1,4 @@
-package com.example.demo;
+package br.edu.ifrs.tads.ppa.config;
 
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.amqp.core.Binding;
@@ -35,7 +35,6 @@ public class RabbitMQConfig {
                 .to(userExchange())
                 .with(ROUTING_KEY);
     }
-
 
     @Bean
     public Jackson2JsonMessageConverter jsonMessageConverter() {
